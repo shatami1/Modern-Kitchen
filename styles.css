@@ -279,11 +279,16 @@ body {
     font-weight: 500;
 }
 .nav-menu .cart-link {
-    background: #b6fcb6;
-    color: #1a365d !important;
+    background: #2ecc40;
+    color: #fff !important;
     border-radius: 6px;
-    padding: 0.3rem 1rem;
+    padding: 0.3rem 2.2em 0.3rem 1em;
+    min-width: 90px;
+    justify-content: flex-end;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
 }
 .hero {
     padding: 4rem 0 3rem 0;

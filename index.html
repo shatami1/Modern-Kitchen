@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arron Advertising - Kitchen Appliances Agent</title>
+    <title>Aaron Advertising - Kitchen Appliances Agent</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         @media (max-width: 900px) {
@@ -84,20 +84,24 @@
 </head>
 <body>
     <nav class="navbar vibrant-nav">
-        <div class="container nav-mobile-container">
+        <div class="container nav-mobile-container" style="position:relative;">
             <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.nav-menu').classList.toggle('open')">
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="cart.html" class="cart-link">Cart</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <a href="cart.html" class="cart-link" style="position:absolute;top:12px;right:18px;z-index:1100;display:flex;align-items:center;gap:0.3em;font-weight:bold;text-decoration:none;">
+                <span style="font-size:1.7em;line-height:1;">🛒</span>
+                <span class="cart-text" style="font-size:1.1em;">Cart</span>
+            </a>
         </div>
     </nav>
+
     <div class="vibrant-logo-box">
-        <img src='images/arron-advertising-logo.png' alt='Aaron Advertising' class="logo" style="display:block;margin:0 auto 0.5rem auto;">
+        <img src='images/arron-advertising-logo.png' alt='Aaron Advertising' class="logo" style="display:block;margin:0 auto 0.5rem auto;'>
         <span class="aaron-mobile-title">Aaron Advertising</span>
         <style>
         @media (max-width: 900px) {

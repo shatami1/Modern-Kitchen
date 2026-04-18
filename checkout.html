@@ -1,16 +1,19 @@
-<nav class="navbar">
-    <div class="container nav-mobile-container">
-        <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.nav-menu').classList.toggle('open')">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="cart.html" class="cart-link">Cart</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+    <nav class="navbar">
+        <div class="container nav-mobile-container" style="position:relative;">
+            <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.nav-menu').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="cart.html" class="cart-link" style="position:absolute;top:12px;right:18px;z-index:1100;display:flex;align-items:center;gap:0.3em;font-weight:bold;text-decoration:none;">
+                <span style="font-size:1.7em;line-height:1;">🛒</span>
+                <span class="cart-text" style="font-size:1.1em;">Cart</span>
+            </a>
+        </div>
+    </nav>
 <div style="display:flex;align-items:center;gap:1em;justify-content:center;width:100%;margin-top:1.5rem;">
     <img src="modern-kitchen.jpg.png" alt="Aaron Advertising Logo" class="logo" style="height:192px;width:auto;background:white;border:6px solid #2ecc40;border-radius:24px;box-sizing:border-box;">
 </div>
@@ -19,9 +22,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Arron Advertising</title>
+    <title>Checkout - Aaron Advertising</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+
     .hamburger {
         display: none;
         flex-direction: column;
@@ -184,4 +188,5 @@
     <script src="checkout.js"></script>
     <!-- No Google Places needed for simple address fields -->
 </body>
+    <script src="cart.js"></script>
 </html>

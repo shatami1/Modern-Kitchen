@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Arron Advertising</title>
+    <title>Products - Aaron Advertising</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        .logo {
+            height: 94px !important;
+            max-width: 176px !important;
+            width: auto !important;
+            transition: height 0.2s, max-width 0.2s;
+        }
         @media (max-width: 900px) {
             .vibrant-logo-box {
                 background: none !important;
@@ -13,6 +19,10 @@
                 box-shadow: none !important;
                 padding: 0 !important;
                 margin: 1.2rem auto 0.7rem auto !important;
+            }
+            .logo {
+                height: 36px !important;
+                max-width: 60px !important;
             }
             .aaron-mobile-title {
                 display: block !important;
@@ -28,16 +38,16 @@
         @media (min-width: 901px) {
             .aaron-mobile-title { display: none !important; }
         }
-    .vibrant-logo-box {
-        background: #fff;
-        border-radius: 20px;
-        border: 6px solid #2ecc40;
-        max-width: 420px;
-        margin: 2rem auto 1.5rem auto;
-        padding: 1.5rem 2rem 1rem 2rem;
-        box-shadow: 0 4px 32px rgba(44,204,64,0.18);
-        text-align: center;
-    }
+        .vibrant-logo-box {
+            background: #fff;
+            border-radius: 20px;
+            border: 6px solid #2ecc40;
+            max-width: 420px;
+            margin: 2rem auto 1.5rem auto;
+            padding: 1.5rem 2rem 1rem 2rem;
+            box-shadow: 0 4px 32px rgba(44,204,64,0.18);
+            text-align: center;
+        }
     </style>
     <style>
     @media (max-width: 600px) {
@@ -61,19 +71,26 @@
     </style>
 </head>
 <body>
+
     <nav class="navbar">
-        <div class="container nav-mobile-container">
+        <div class="container nav-mobile-container" style="position:relative;">
+
             <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.nav-menu').classList.toggle('open')">
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="cart.html" class="cart-link">Cart</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <a href="cart.html" class="cart-link" style="position:absolute;top:12px;right:18px;z-index:1100;display:flex;align-items:center;gap:0.3em;font-weight:bold;text-decoration:none;">
+                <span style="font-size:1.7em;line-height:1;">🛒</span>
+                <span class="cart-text" style="font-size:1.1em;">Cart</span>
+            </a>
         </div>
     </nav>
+        <!-- Cart link CSS was accidentally rendered here. It should be in a <style> block in the <head>. -->
+
     <div class="vibrant-logo-box">
         <img src="images/arron-advertising-logo.png" alt="Aaron Advertising" class="logo" style="display:block;margin:0 auto 0.5rem auto;">
         <span class="aaron-mobile-title">Aaron Advertising</span>
@@ -175,6 +192,7 @@
             </div>
         </div>
     </main>
+        <script src="cart.js"></script>
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Arron Advertising. All rights reserved.</p>
