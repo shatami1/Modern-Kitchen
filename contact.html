@@ -6,6 +6,28 @@
     <title>Contact - Arron Advertising</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        @media (max-width: 900px) {
+            .vibrant-logo-box {
+                background: none !important;
+                border: none !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 1.2rem auto 0.7rem auto !important;
+            }
+            .aaron-mobile-title {
+                display: block !important;
+                font-size: 2.1rem;
+                font-weight: 900;
+                color: #1a365d;
+                letter-spacing: 2px;
+                margin: 0.5rem auto 0.5rem auto;
+                text-align: center;
+                font-family: 'Segoe UI', Arial, sans-serif;
+            }
+        }
+        @media (min-width: 901px) {
+            .aaron-mobile-title { display: none !important; }
+        }
     .vibrant-logo-box {
         background: #fff;
         border-radius: 20px;
@@ -144,80 +166,5 @@
             <p>&copy; 2026 Arron Advertising. All rights reserved.</p>
         </div>
     </footer>
+
         .hamburger {
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            width: 38px;
-            height: 38px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            margin-right: 1rem;
-            z-index: 1002;
-        }
-        .hamburger span {
-            display: block;
-            height: 4px;
-            width: 28px;
-            background: #fff;
-            margin: 5px 0;
-            border-radius: 2px;
-            transition: all 0.3s;
-        }
-        @media (max-width: 900px) {
-            .navbar .container.nav-mobile-container {
-                flex-direction: row !important;
-                align-items: flex-start !important;
-                justify-content: flex-start !important;
-                padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
-                background: #1a365d;
-                border-radius: 0 0 12px 12px;
-                position: relative;
-            }
-            .hamburger {
-                display: flex;
-            }
-            .nav-menu {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background: #1a365d;
-                width: 200px;
-                flex-direction: column !important;
-                align-items: flex-start !important;
-                gap: 0.5rem !important;
-                margin: 0;
-                padding: 1rem 0.5rem;
-                border-radius: 0 0 12px 12px;
-                box-shadow: 0 4px 16px rgba(0,0,0,0.13);
-                display: none;
-                z-index: 1001;
-            }
-            .nav-menu.open {
-                display: flex;
-            }
-            .nav-menu li {
-                width: 100%;
-            }
-            .nav-menu a {
-                width: 100%;
-                display: block;
-                padding: 0.7rem 1rem;
-                font-size: 1.1rem;
-                color: #fff !important;
-                border-radius: 6px;
-            }
-            .vibrant-logo-box {
-                margin-top: 1.5rem !important;
-            }
-        }
-        @media (max-width: 600px) {
-            .navbar .container.nav-mobile-container {
-                padding: 0.2rem 0.2rem 0.2rem 0.2rem !important;
-            }
-            .nav-menu {
-                width: 98vw;
-                left: 0;
-            }
-        }

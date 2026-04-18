@@ -6,6 +6,28 @@
     <title>Arron Advertising - Kitchen Appliances Agent</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        @media (max-width: 900px) {
+            .vibrant-logo-box {
+                background: none !important;
+                border: none !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 1.2rem auto 0.7rem auto !important;
+            }
+            .aaron-mobile-title {
+                display: block !important;
+                font-size: 2.1rem;
+                font-weight: 900;
+                color: #1a365d;
+                letter-spacing: 2px;
+                margin: 0.5rem auto 0.5rem auto;
+                text-align: center;
+                font-family: 'Segoe UI', Arial, sans-serif;
+            }
+        }
+        @media (min-width: 901px) {
+            .aaron-mobile-title { display: none !important; }
+        }
     body {
         background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 40%, #b6fcb6 100%);
         min-height: 100vh;
