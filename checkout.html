@@ -1,10 +1,9 @@
 <nav class="navbar">
-    <div class="container" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.2em;">
-        <div style="display:flex;align-items:center;gap:1em;justify-content:center;width:100%;">
-            <img src="images/arron-advertising-logo.png" alt="Arron Advertising Logo" class="logo" style="height:192px;width:auto;background:white;border:6px solid #2ecc40;border-radius:24px;box-sizing:border-box;">
-            <!-- Site title removed as requested -->
-        </div>
-        <ul class="nav-menu" style="display:flex;gap:1.5em;margin-top:0.5em;justify-content:center;">
+    <div class="container nav-mobile-container">
+        <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.nav-menu').classList.toggle('open')">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="cart.html" class="cart-link">Cart</a></li>
@@ -12,20 +11,9 @@
         </ul>
     </div>
 </nav>
-<nav class="navbar">
-    <div class="container" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.2em;">
-        <div style="display:flex;align-items:center;gap:1em;justify-content:center;width:100%;">
-            <img src="modern-kitchen.jpg.png" alt="Aaron Advertising Logo" class="logo" style="height:192px;width:auto;background:white;border:6px solid #2ecc40;border-radius:24px;box-sizing:border-box;">
-            <!-- Site title removed as requested -->
-        </div>
-        <ul class="nav-menu" style="display:flex;gap:1.5em;margin-top:0.5em;justify-content:center;">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="cart.html" class="cart-link">Cart</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+<div style="display:flex;align-items:center;gap:1em;justify-content:center;width:100%;margin-top:1.5rem;">
+    <img src="modern-kitchen.jpg.png" alt="Aaron Advertising Logo" class="logo" style="height:192px;width:auto;background:white;border:6px solid #2ecc40;border-radius:24px;box-sizing:border-box;">
+</div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,35 +22,84 @@
     <title>Checkout - Arron Advertising</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-    @media (max-width: 600px) {
-        .logo {
-            height: 80px !important;
-            max-width: 90vw !important;
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-right: 1rem;
+        z-index: 1002;
+    }
+    .hamburger span {
+        display: block;
+        height: 4px;
+        width: 28px;
+        background: #fff;
+        margin: 5px 0;
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
+    @media (max-width: 900px) {
+        .navbar .container.nav-mobile-container {
+            flex-direction: row !important;
+            align-items: flex-start !important;
+            justify-content: flex-start !important;
+            padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+            background: #1a365d;
+            border-radius: 0 0 12px 12px;
+            position: relative;
+        }
+        .hamburger {
+            display: flex;
         }
         .nav-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1a365d;
+            width: 200px;
             flex-direction: column !important;
-            gap: 1rem !important;
-            font-size: 1.2rem !important;
-            align-items: center !important;
+            align-items: flex-start !important;
+            gap: 0.5rem !important;
+            margin: 0;
+            padding: 1rem 0.5rem;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+            display: none;
+            z-index: 1001;
         }
-        .navbar .container {
-            flex-direction: column !important;
-            align-items: center !important;
+        .nav-menu.open {
+            display: flex;
+        }
+        .nav-menu li {
+            width: 100%;
+        }
+        .nav-menu a {
+            width: 100%;
+            display: block;
+            padding: 0.7rem 1rem;
+            font-size: 1.1rem;
+            color: #fff !important;
+            border-radius: 6px;
+        }
+    }
+    @media (max-width: 600px) {
+        .navbar .container.nav-mobile-container {
+            padding: 0.2rem 0.2rem 0.2rem 0.2rem !important;
+        }
+        .nav-menu {
+            width: 98vw;
+            left: 0;
         }
     }
     </style>
     <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
-    <header>
-        <h1 style="text-align:center;">Arron Advertising Checkout</h1>
-        <nav class="checkout-navbar">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="cart.html">Cart</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
     <main>
         <section class="checkout-section">
             <h2>Review Your Order</h2>

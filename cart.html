@@ -6,15 +6,29 @@
     <title>Cart - Arron Advertising</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+    .vibrant-logo-box {
+        background: #fff;
+        border-radius: 20px;
+        border: 6px solid #2ecc40;
+        max-width: 420px;
+        margin: 2rem auto 1.5rem auto;
+        padding: 1.5rem 2rem 1rem 2rem;
+        box-shadow: 0 4px 32px rgba(44,204,64,0.18);
+        text-align: center;
+    }
+    </style>
+    <style>
     @media (max-width: 600px) {
         .logo {
+            display: block !important;
             height: 80px !important;
             max-width: 90vw !important;
+            margin: 0 auto 1rem auto !important;
         }
         .nav-menu {
             flex-direction: column !important;
             gap: 1rem !important;
-            font-size: 1.2rem !important;
+            font-size: 0.84rem !important;
             align-items: center !important;
         }
         .navbar .container {
@@ -26,9 +40,11 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="container" style="flex-direction:column;align-items:center;">
-            <img src="modern-kitchen.jpg.png" alt="Aaron Advertising Logo" class="logo">
-            <ul class="nav-menu" style="margin-top:1.5rem; font-size:2rem; gap:2.5rem; justify-content:center;">
+        <div class="container nav-mobile-container">
+            <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.nav-menu').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="cart.html" class="cart-link">Cart</a></li>
@@ -36,6 +52,9 @@
             </ul>
         </div>
     </nav>
+    <div class="vibrant-logo-box">
+        <img src="images/arron-advertising-logo.png" alt="Aaron Advertising" style="max-width:320px;width:100%;height:auto;display:block;margin:0 auto 0.5rem auto;">
+    </div>
     <main class="cart-main">
         <div class="container">
             <h1>Your Cart</h1>
@@ -50,7 +69,82 @@
         <div class="container">
             <p>&copy; 2026 Arron Advertising. All rights reserved.</p>
         </div>
-    </footer>
-    <script src="cart.js"></script>
-</body>
-</html>
+    <style>
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-right: 1rem;
+        z-index: 1002;
+    }
+    .hamburger span {
+        display: block;
+        height: 4px;
+        width: 28px;
+        background: #fff;
+        margin: 5px 0;
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
+    @media (max-width: 900px) {
+        .navbar .container.nav-mobile-container {
+            flex-direction: row !important;
+            align-items: flex-start !important;
+            justify-content: flex-start !important;
+            padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+            background: #1a365d;
+            border-radius: 0 0 12px 12px;
+            position: relative;
+        }
+        .hamburger {
+            display: flex;
+        }
+        .nav-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1a365d;
+            width: 200px;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.5rem !important;
+            margin: 0;
+            padding: 1rem 0.5rem;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+            display: none;
+            z-index: 1001;
+        }
+        .nav-menu.open {
+            display: flex;
+        }
+        .nav-menu li {
+            width: 100%;
+        }
+        .nav-menu a {
+            width: 100%;
+            display: block;
+            padding: 0.7rem 1rem;
+            font-size: 1.1rem;
+            color: #fff !important;
+            border-radius: 6px;
+        }
+        .vibrant-logo-box {
+            margin-top: 1.5rem !important;
+        }
+    }
+    @media (max-width: 600px) {
+        .navbar .container.nav-mobile-container {
+            padding: 0.2rem 0.2rem 0.2rem 0.2rem !important;
+        }
+        .nav-menu {
+            width: 98vw;
+            left: 0;
+        }
+    }
+    </style>
