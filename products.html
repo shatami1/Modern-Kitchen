@@ -54,6 +54,25 @@
     </nav>
     <div class="vibrant-logo-box">
         <img src="images/arron-advertising-logo.png" alt="Aaron Advertising" class="logo" style="display:block;margin:0 auto 0.5rem auto;">
+        <span class="aaron-mobile-title">Aaron Advertising</span>
+        <style>
+        @media (max-width: 900px) {
+            .logo { display: none !important; }
+            .aaron-mobile-title {
+                display: block !important;
+                font-size: 2.1rem;
+                font-weight: 900;
+                color: #1a365d;
+                letter-spacing: 2px;
+                margin: 0.5rem auto 0.5rem auto;
+                text-align: center;
+                font-family: 'Segoe UI', Arial, sans-serif;
+            }
+        }
+        @media (min-width: 901px) {
+            .aaron-mobile-title { display: none !important; }
+        }
+        </style>
     </div>
     <main class="products-main">
         <div class="container">
