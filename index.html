@@ -92,42 +92,12 @@
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="products.html">Products</a></li>
                                 <li><a href="contact.html">Contact</a></li>
-                                <li style="position:relative;">
-                                    <select onchange="if(this.value)window.open(this.value,'_blank');" style="padding:0.3em 1.2em;border-radius:6px;border:1px solid #2ecc40;background:#fff;color:#1a365d;font-weight:bold;">
-                                        <option value="">Language</option>
-                                        <option value='https://translate.google.com/translate?sl=en&tl=es&u=https://shatami1.github.io/Modern-Kitchen/index.html'>Español (Google)</option>
-                                    </select>
-                                </li>
+                                <li><a href="cart.html" class="cart-link"><span style="font-size:1.7em;line-height:1;">🛒</span> <span class="cart-text" style="font-size:1.1em;">Cart</span></a></li>
             </ul>
-            <a href="cart.html" class="cart-link" style="position:absolute;top:12px;right:18px;z-index:1100;display:flex;align-items:center;gap:0.3em;font-weight:bold;text-decoration:none;">
-                <span style="font-size:1.7em;line-height:1;">🛒</span>
-                <span class="cart-text" style="font-size:1.1em;">Cart</span>
-            </a>
         </div>
     </nav>
 
-    <div class="vibrant-logo-box">
-        <img src='images/arron-advertising-logo.png' alt='Aaron Advertising' class="logo" style="display:block;margin:0 auto 0.5rem auto;'>
-        <span class="aaron-mobile-title">Aaron Advertising</span>
-        <style>
-        @media (max-width: 900px) {
-            .logo { display: none !important; }
-            .aaron-mobile-title {
-                display: block !important;
-                font-size: 2.1rem;
-                font-weight: 900;
-                color: #1a365d;
-                letter-spacing: 2px;
-                margin: 0.5rem auto 0.5rem auto;
-                text-align: center;
-                font-family: 'Segoe UI', Arial, sans-serif;
-            }
-        }
-        @media (min-width: 901px) {
-            .aaron-mobile-title { display: none !important; }
-        }
-        </style>
-    </div>
+    <!-- Logo removed from header -->
     <style>
     .hamburger {
         display: none;
@@ -208,10 +178,37 @@
     }
     </style>
 
-    <section class="hero ai-kitchen-bg">
-        <div class="container vibrant-hero" style="text-align:center;">
+    <section class="hero ai-kitchen-bg" style="display:flex;justify-content:center;align-items:center;min-height:60vh;">
+        <div class="container vibrant-hero" style="text-align:center;max-width:600px;width:100%;">
             <h1 style="font-size:2.7rem;font-weight:900;color:#1a365d;margin-bottom:1.5rem;">Modern Kitchen Appliances</h1>
-            <img src="https://spztjkstore.com/cdn/shop/files/5df4dae1240fcc53526322531b5514fc.jpg?v=1741152723&width=360" alt="Juicer" style="max-width:380px;width:100%;border-radius:18px;box-shadow:0 4px 24px rgba(44,204,64,0.13);margin-bottom:2rem;">
+            <!-- Product Slideshow Start -->
+            <div class="slideshow-container" style="max-width:380px;margin:0 auto 2rem auto;position:relative;">
+                <div class="slide fade">
+                    <img src="https://spztjkstore.com/cdn/shop/files/5df4dae1240fcc53526322531b5514fc.jpg?v=1741152723&width=380" style="width:100%;border-radius:18px;box-shadow:0 4px 24px rgba(44,204,64,0.13);" alt="SPZTJK Juicer Cold-pressed Juicer">
+                    <div class="caption">SPZTJK Juicer Cold-pressed Juicer</div>
+                </div>
+                <div class="slide fade">
+                    <img src="https://spztjkstore.com/cdn/shop/files/2-10.jpg?v=1750234733&width=380" style="width:100%;border-radius:18px;box-shadow:0 4px 24px rgba(44,204,64,0.13);" alt="SPZTJK 50oz 10-in-1 Automatic Nut Milk Maker">
+                    <div class="caption">SPZTJK 50oz 10-in-1 Automatic Nut Milk Maker</div>
+                </div>
+                <div class="slide fade">
+                    <img src="https://spztjkstore.com/cdn/shop/files/1-4.jpg?v=1750235337&width=380" style="width:100%;border-radius:18px;box-shadow:0 4px 24px rgba(44,204,64,0.13);" alt="SPZTJK 1500W Stainless Steel Electric Deep Fryer">
+                    <div class="caption">SPZTJK 1500W Stainless Steel Electric Deep Fryer</div>
+                </div>
+                <div class="slide fade">
+                    <img src="https://spztjkstore.com/cdn/shop/files/3_d66b428f-0b27-4ddf-9db0-69243267ae58.jpg?v=1750235914&width=380" style="width:100%;border-radius:18px;box-shadow:0 4px 24px rgba(44,204,64,0.13);" alt="Cold Press Juicer, Celiberry Slow Masticating Juicer">
+                    <div class="caption">Cold Press Juicer, Celiberry Slow Masticating Juicer</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div style="text-align:center;margin-bottom:2rem;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+            <!-- Product Slideshow End -->
             <p style="font-size:1.2rem;color:#2d4a6a;margin-bottom:2.5rem;">Smart solutions for your home, powered by Kitchen AI.</p>
             <a href="products.html" class="btn-primary" style="font-size:1.2rem;padding:0.9rem 2.5rem;background:#2ecc40;color:#fff;border:none;">Browse Products</a>
         </div>
@@ -219,6 +216,81 @@
 
 
 
+    <style>
+    .slideshow-container { position: relative; }
+    .slide { display: none; }
+    .fade { animation: fade 1s; }
+    @keyframes fade { from { opacity: .4 } to { opacity: 1 } }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 12px;
+        margin-top: -22px;
+        color: #2ecc40;
+        font-weight: bold;
+        font-size: 24px;
+        transition: 0.3s;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background: rgba(255,255,255,0.7);
+    }
+    .next { right: 0; border-radius: 3px 0 0 3px; }
+    .prev { left: 0; }
+    .caption {
+        color: #1a365d;
+        font-size: 1.1em;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        background: rgba(255,255,255,0.8);
+        border-radius: 0 0 10px 10px;
+    }
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover { background-color: #2ecc40; }
+    </style>
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+    // Auto slide
+    setInterval(function() { plusSlides(1); }, 4000);
+    </script>
     <footer class="footer">
         <div class="container vibrant-footer">
             <p>&copy; 2026 Aaron Advertising. All rights reserved.</p>

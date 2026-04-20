@@ -39,27 +39,6 @@
         box-shadow: 0 4px 32px rgba(44,204,64,0.18);
         text-align: center;
     }
-    .hamburger {
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        width: 38px;
-        height: 38px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        margin-right: 1rem;
-        z-index: 1002;
-    }
-    .hamburger span {
-        display: block;
-        height: 4px;
-        width: 28px;
-        background: #fff;
-        margin: 5px 0;
-        border-radius: 2px;
-        transition: all 0.3s;
-    }
     @media (max-width: 900px) {
         .navbar .container.nav-mobile-container {
             flex-direction: row !important;
@@ -69,9 +48,6 @@
             background: #1a365d;
             border-radius: 0 0 12px 12px;
             position: relative;
-        }
-        .hamburger {
-            display: flex;
         }
         .nav-menu {
             position: absolute;
@@ -128,12 +104,6 @@
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="products.html">Products</a></li>
                                 <li><a href="contact.html">Contact</a></li>
-                                <li style="position:relative;">
-                                    <select onchange="if(this.value)window.open(this.value,'_blank');" style="padding:0.3em 1.2em;border-radius:6px;border:1px solid #2ecc40;background:#fff;color:#1a365d;font-weight:bold;">
-                                        <option value="">Language</option>
-                                        <option value='https://translate.google.com/translate?sl=en&tl=es&u=https://shatami1.github.io/Modern-Kitchen/contact.html'>Español (Google)</option>
-                                    </select>
-                                </li>
             </ul>
             <a href="cart.html" class="cart-link" style="position:absolute;top:12px;right:18px;z-index:1100;display:flex;align-items:center;gap:0.3em;font-weight:bold;text-decoration:none;">
                 <span style="font-size:1.7em;line-height:1;">🛒</span>
@@ -142,40 +112,18 @@
         </div>
 
     </nav>
-    <div class="vibrant-logo-box">
-        <img src="images/arron-advertising-logo.png" alt="Aaron Advertising" class="logo" style="display:block;margin:0 auto 0.5rem auto;">
-        <span class="aaron-mobile-title">Aaron Advertising</span>
-        <style>
-        @media (max-width: 900px) {
-            .logo { display: none !important; }
-            .aaron-mobile-title {
-                display: block !important;
-                font-size: 2.1rem;
-                font-weight: 900;
-                color: #1a365d;
-                letter-spacing: 2px;
-                margin: 0.5rem auto 0.5rem auto;
-                text-align: center;
-                font-family: 'Segoe UI', Arial, sans-serif;
-            }
-        }
-        @media (min-width: 901px) {
-            .aaron-mobile-title { display: none !important; }
-        }
-        </style>
-    </div>
-    <main class="contact-main">
-        <div class="container">
+    <!-- Logo removed from header -->
+    <main class="contact-main" style="display:flex;justify-content:center;align-items:center;min-height:60vh;">
+        <div class="container" style="max-width:600px;width:100%;text-align:center;">
             <h1>Contact Aaron Advertising</h1>
             <p>Email: <a href="mailto:info@aaronadvertising.com">info@aaronadvertising.com</a></p>
             <p>Phone: <a href="tel:555-AARON-AD">555-AARON-AD</a></p>
             <p>Location: Sandy Springs, USA</p>
         </div>
     </main>
-    <footer class="footer">
-        <div class="container">
+    <footer class="footer" style="display:flex;justify-content:center;align-items:center;">
+        <div class="container" style="max-width:600px;width:100%;text-align:center;">
             <p>&copy; 2026 Aaron Advertising. All rights reserved.</p>
         </div>
     </footer>
 
-        .hamburger {
