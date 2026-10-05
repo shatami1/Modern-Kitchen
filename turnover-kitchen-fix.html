@@ -17,25 +17,43 @@
   <link rel="canonical" href="https://kitchen.accentps.com/turnover-kitchen-fix.html">
   <link rel="stylesheet" href="kitchen.css">
   <style>
-    .quick-hero{min-height:72vh;display:grid;align-items:end;background:linear-gradient(120deg,rgba(31,35,30,.92),rgba(31,35,30,.72)),url('assets/kitchen-ivory.webp') center/cover;color:#f6f1e8}
-    .quick-hero .wrap{padding-top:9rem;padding-bottom:5rem}
-    .quick-hero h1{max-width:900px;font-size:clamp(3rem,8vw,7rem);line-height:.92;margin:.6rem 0 1.5rem}
-    .quick-hero p{max-width:720px;font-size:clamp(1.1rem,2vw,1.45rem);line-height:1.6}
-    .quick-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
-    .quick-section{padding:6rem 0}
-    .quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#d6d0c6;border:1px solid #d6d0c6;margin-top:2.5rem}
-    .quick-card{background:#f7f3eb;padding:2rem}
-    .quick-card span{font-size:.8rem;letter-spacing:.14em}
-    .quick-card h3{font-size:1.5rem;margin:.5rem 0}
-    .turnover-box{background:#292d27;color:#f6f1e8;padding:4rem;border-radius:2px}
-    .turnover-box h2{font-size:clamp(2.2rem,5vw,4.5rem);max-width:850px;margin:.5rem 0 1.5rem}
-    .turnover-box p{max-width:760px;font-size:1.2rem;line-height:1.65}
-    .quick-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem}
-    .quick-step{border-top:1px solid #a8a39a;padding-top:1.25rem}
-    .quick-step strong{display:block;font-size:1.25rem;margin:.35rem 0}
-    .quick-note{font-size:.92rem;color:#666;max-width:850px}
-    @media(max-width:760px){.quick-grid,.quick-steps{grid-template-columns:1fr}.quick-hero .wrap{padding-top:7rem}.turnover-box{padding:2rem}}
-  </style>
+:root{--navy:#17354b;--green:#68a23a;--ink:#10283a;--paper:#f7f8f5}
+body{background:var(--paper);color:var(--ink)}
+.site-header{background:#fff}
+.quick-hero{min-height:650px;display:grid;grid-template-columns:1.02fr .98fr;background:var(--navy);color:#fff;overflow:hidden}
+.quick-hero .hero-panel{padding:7.5rem max(2rem,5vw) 4rem;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(120deg,#17354b,#234c65)}
+.quick-hero .hero-photo{min-height:650px;background:url('assets/kitchen-ivory.webp') center/cover no-repeat;position:relative}
+.quick-hero .hero-photo:after{content:"Small fixes.\A Big difference.";white-space:pre;position:absolute;right:8%;bottom:18%;font-size:clamp(2rem,4vw,4rem);line-height:1.05;font-style:italic;color:#142d3f;text-align:right;text-shadow:0 1px 12px #fff}
+.quick-hero h1{font-size:clamp(3rem,6vw,6rem);line-height:.98;margin:.7rem 0 1.4rem;max-width:760px}
+.quick-hero h1 em{color:#83bd4d;font-style:normal}
+.quick-hero p{font-size:1.25rem;line-height:1.55;max-width:650px}
+.quick-hero .eyebrow{color:#83bd4d;font-weight:800}
+.quick-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.trust-row{display:flex;gap:2rem;flex-wrap:wrap;margin-top:2.5rem;font-size:.92rem}
+.trust-row span{border-top:3px solid #83bd4d;padding-top:.65rem}
+.quick-section{padding:5.5rem 0}
+.quick-section>h2{text-align:center;font-size:clamp(2.3rem,4vw,4rem);margin:.5rem auto;max-width:900px}
+.quick-section>.eyebrow{text-align:center;color:#5b9130;font-weight:800}
+.quick-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.4rem;margin-top:2.5rem}
+.quick-card{background:#fff;border:1px solid #e3e6df;padding:0 0 1.5rem;overflow:hidden}
+.quick-card img{width:100%!important;height:180px!important;object-fit:cover!important;margin:0 0 1.25rem!important;background:#eee}
+.quick-card span,.quick-card h3,.quick-card p{margin-left:1.25rem;margin-right:1.25rem}
+.quick-card span{font-size:.78rem;letter-spacing:.12em;color:#5b9130;font-weight:800}
+.quick-card h3{font-size:1.25rem;margin-top:.4rem;margin-bottom:.5rem}
+.quick-card p{line-height:1.5}
+.start-price{color:#5b9130;font-weight:800;font-size:1.15rem}
+.turnover-box{background:#edf4e9;padding:4rem;display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center}
+.turnover-box h2{font-size:clamp(2.3rem,4vw,4.2rem);margin:.4rem 0 1rem}
+.turnover-box p{font-size:1.15rem;line-height:1.6}
+.turnover-cta{background:#5b9130;color:#fff;padding:2rem;text-align:center}
+.turnover-cta strong{display:block;font-size:1.8rem;margin-bottom:1rem}
+.quick-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem}
+.quick-step{border-top:3px solid #5b9130;padding-top:1.25rem}
+.quick-step strong{display:block;font-size:1.25rem;margin:.35rem 0}
+.quick-note{font-size:.92rem;color:#5f665d;max-width:900px;margin:2rem auto 0}
+@media(max-width:900px){.quick-hero{grid-template-columns:1fr}.quick-hero .hero-photo{min-height:420px}.quick-grid{grid-template-columns:repeat(2,1fr)}.turnover-box{grid-template-columns:1fr}}
+@media(max-width:600px){.quick-grid,.quick-steps{grid-template-columns:1fr}.quick-hero .hero-panel{padding-top:7rem}.turnover-box{padding:2rem}}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -46,25 +64,23 @@
 
   <main id="main">
     <section class="quick-hero">
-      <div class="wrap">
-        <p class="eyebrow">TURNOVER KITCHEN FIX · METRO ATLANTA</p>
-        <h1>Does your turnover<br>team do <em>that?</em></h1>
-        <p>Cabinet doors. Countertop details. Lighting. Faucets. The small kitchen issues that can delay a turnover do not always need a full remodel. <strong>We handle them — faster and for less than treating every issue like a renovation.</strong></p>
-        <div class="quick-actions">
-          <a class="button button-cream" href="#contact">Request a quick-fix visit <span aria-hidden="true">↗</span></a>
-          <a class="hero-text-link" href="tel:+16782429309">Call 678-242-9309</a>
-        </div>
-      </div>
-    </section>
+<div class="hero-panel">
+<p class="eyebrow">KITCHEN QUICK FIXES · METRO ATLANTA</p>
+<h1>Does your turnover team handle the small kitchen problems?<br><em>We do.</em></h1>
+<p>From cabinet doors and countertops to lighting and faucets, we solve common kitchen issues faster and at a lower cost than treating every problem like a full renovation.</p>
+<div class="quick-actions"><a class="button button-cream" href="#contact">Request a quick-fix visit ↗</a><a class="hero-text-link" href="tel:+16782429309">678-242-9309</a></div>
+<div class="trust-row"><span>⚡ Fast turnaround</span><span>$ Lower-cost approach</span><span>✓ Local Metro Atlanta service</span></div>
+</div><div class="hero-photo" role="img" aria-label="Bright modern kitchen with cabinetry, countertop, lighting and faucet"></div>
+</section>
 
     <section class="quick-section wrap" id="services">
-      <p class="eyebrow">WHAT WE CAN HELP WITH · SERVICE VISITS START AT $149</p>
-      <h2>Fix the problem.<br><em>Keep the kitchen moving.</em></h2><p style="max-width:760px;font-size:1.15rem;line-height:1.6"><strong>Kitchen Quick-Fix Visit — starting at $149 labor.</strong> Designed for one straightforward minor repair or adjustment during a scheduled visit. Parts and materials are additional. We confirm scope and price before work begins.</p>
+      <p class="eyebrow">COMMON KITCHEN QUICK FIXES</p>
+      <h2>Reliable solutions for the issues that slow down your turnovers.</h2><p style="max-width:760px;margin:1rem auto;text-align:center;font-size:1.15rem;line-height:1.6"><strong>Kitchen Quick-Fix Visit — starting at $149 labor.</strong> One straightforward minor repair or adjustment. Parts and materials are additional.</p>
       <div class="quick-grid">
-        <article class="quick-card"><img src="assets/atl-snow-white-shaker.webp" alt="Cabinet door representing cabinet door and hardware repairs" style="width:100%;height:180px;object-fit:contain;background:#eee9df;margin-bottom:1.25rem"><span>01</span><h3>Cabinet doors & hardware</h3><p>Loose, damaged or misaligned cabinet doors, hinges, pulls and other minor cabinetry issues.</p></article>
-        <article class="quick-card"><img src="assets/kitchen-walnut-800.webp" alt="Kitchen countertop and cabinetry representing minor countertop repairs" style="width:100%;height:180px;object-fit:cover;margin-bottom:1.25rem"><span>02</span><h3>Countertop issues</h3><p>Minor countertop repairs, trim and practical fixes when replacement of the entire kitchen is not necessary.</p></article>
-        <article class="quick-card"><img src="assets/kitchen-ivory-800.webp" alt="Bright kitchen representing kitchen lighting repairs and fixture updates" style="width:100%;height:180px;object-fit:cover;margin-bottom:1.25rem"><span>03</span><h3>Kitchen lighting</h3><p>Fixture replacement, under-cabinet lighting and coordination for minor kitchen lighting problems.</p></article>
-        <article class="quick-card"><img src="assets/kitchen-before.webp" alt="Kitchen sink area representing faucet and sink-area repairs" style="width:100%;height:180px;object-fit:cover;margin-bottom:1.25rem"><span>04</span><h3>Kitchen faucets</h3><p>Faucet replacement and related minor sink-area repairs, with plumbing work coordinated when needed.</p></article>
+        <article class="quick-card"><img src="assets/atl-snow-white-shaker.webp" alt="Cabinet door representing cabinet door and hardware repairs" style="width:100%;height:180px;object-fit:contain;background:#eee9df;margin-bottom:1.25rem"><span>01</span><h3>Cabinet doors & hardware</h3><p>Loose, damaged or misaligned cabinet doors, hinges, pulls and other minor cabinetry issues.</p><p class="start-price">From $149 labor</p></article>
+        <article class="quick-card"><img src="assets/kitchen-walnut-800.webp" alt="Kitchen countertop and cabinetry representing minor countertop repairs" style="width:100%;height:180px;object-fit:cover;margin-bottom:1.25rem"><span>02</span><h3>Countertop issues</h3><p>Minor countertop repairs, trim and practical fixes when replacement of the entire kitchen is not necessary.</p><p class="start-price">From $149 labor</p></article>
+        <article class="quick-card"><img src="assets/kitchen-ivory-800.webp" alt="Bright kitchen representing kitchen lighting repairs and fixture updates" style="width:100%;height:180px;object-fit:cover;margin-bottom:1.25rem"><span>03</span><h3>Kitchen lighting</h3><p>Fixture replacement, under-cabinet lighting and coordination for minor kitchen lighting problems.</p><p class="start-price">From $149 labor</p></article>
+        <article class="quick-card"><img src="assets/kitchen-before.webp" alt="Kitchen sink area representing faucet and sink-area repairs" style="width:100%;height:180px;object-fit:cover;margin-bottom:1.25rem"><span>04</span><h3>Kitchen faucets</h3><p>Faucet replacement and related minor sink-area repairs, with plumbing work coordinated when needed.</p><p class="start-price">From $149 labor</p></article>
         <article class="quick-card"><span>05</span><h3>Finishing details</h3><p>Small trim, caulking, touch-up and repair items that help a kitchen look ready for the next resident.</p></article>
         <article class="quick-card"><span>06</span><h3>Multiple-item punch lists</h3><p>Send us a short list of kitchen issues and photos. We can review what fits one visit and what needs separate trade work.</p></article>
       </div>
@@ -72,13 +88,12 @@
     </section>
 
     <section class="quick-section wrap" id="turnover">
-      <div class="turnover-box">
+      <div class="turnover-box"><div>
         <p class="eyebrow">PROPERTY TURNOVER SUPPORT</p>
         <h2>Does your turnover team handle the small kitchen problems?</h2>
         <p><strong>We do.</strong> Instead of calling a full renovation crew for every loose cabinet door, tired faucet, countertop detail or lighting issue, Accent Property Services can handle focused kitchen punch-list work — often faster and at a lower total cost than treating every issue like a major remodel.</p>
         <p>For property managers, the goal is simple: identify the issues, define the scope, complete the practical repairs and get the kitchen ready.</p>
-      </div>
-    </section>
+      </div><div class="turnover-cta"><strong>Need multiple fixes?</strong><p>Send us the kitchen punch list and photos. We’ll review the scope and price the visit before work begins.</p><a class="button button-cream" href="#contact">Request a quote →</a></div></div></section>
 
     <section class="quick-section wrap">
       <p class="eyebrow">A SIMPLE PROCESS</p>
